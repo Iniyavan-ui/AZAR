@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Link Opener</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    input, button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 20px;
+    }
+
+    input {
+      background-color: #fff;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #linkContainer {
+      display: none;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Enter a Number to Open a Link</h1>
+  <input type="text" id="numberInput" placeholder="Enter a number">
+  <button onclick="openLink()">Go</button>
+
+  <div id="linkContainer">
+    <iframe id="linkFrame"></iframe>
+  </div>
+
+  <script>
+    function openLink() {
+      var numberInput = document.getElementById("numberInput").value;
+      if (numberInput == "42") {
+        document.getElementById("linkContainer").style.display = "block";
+        document.getElementById("linkFrame").src = "https://fun-banking.com/iniyavan2011/ika";
+      } else {
+        alert("Invalid number.");
+      }
+    }
+  </script>
+</body>
+</html>
